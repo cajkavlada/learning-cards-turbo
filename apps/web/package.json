@@ -1,6 +1,6 @@
 {
   "name": "@repo/web",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@repo/ui": "workspace:*",
-    "next": "14.2.6",
+    "next": "^14.2.6",
     "react": "catalog:react18",
     "react-dom": "catalog:react18"
   },
@@ -27,7 +27,7 @@
     "@types/react": "catalog:react18",
     "@types/react-dom": "catalog:react18",
     "eslint": "catalog:",
-    "eslint-config-next": "15.0.2",
+    "eslint-config-next": "^15.0.2",
     "prettier": "catalog:",
     "tailwindcss": "catalog:",
     "typescript": "catalog:"

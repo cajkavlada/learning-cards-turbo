@@ -12,9 +12,10 @@
     "typecheck": "turbo run typecheck"
   },
   "devDependencies": {
-    "prettier": "^3.2.5",
+    "@repo/prettier-config": "workspace:*",
+    "prettier": "catalog:",
     "turbo": "^2.2.3",
-    "typescript": "5.5.4"
+    "typescript": "catalog:"
   },
   "packageManager": "pnpm@8.15.6",
   "engines": {
