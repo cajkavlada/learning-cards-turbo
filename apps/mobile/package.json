@@ -1,7 +1,8 @@
 {
   "name": "@repo/mobile",
-  "main": "expo-router/entry",
   "version": "0.0.0",
+  "private": true,
+  "main": "expo-router/entry",
   "scripts": {
     "clean": "git clean -xdf .cache .expo .turbo android ios node_modules",
     "dev": "expo start",
@@ -55,5 +56,5 @@
     "tailwindcss": "catalog:",
     "typescript": "catalog:"
   },
-  "private": true
+  "prettier": "@repo/prettier-config"
 }

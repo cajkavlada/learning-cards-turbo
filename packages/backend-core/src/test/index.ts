@@ -2,7 +2,7 @@ import "server-only";
 
 export async function getTitle() {
   await new Promise((resolve) => setTimeout(resolve, 1000));
-  return "Starting page";
+  return "Welcome!";
 }
 
 export async function sayHi(name: string) {

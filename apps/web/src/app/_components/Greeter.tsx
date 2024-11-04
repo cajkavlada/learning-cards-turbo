@@ -11,7 +11,7 @@ export function Greeter() {
 
   return (
     <Card className="flex items-center gap-4 p-4">
-      <Button onClick={() => greet("John")}>click</Button>
+      <Button onClick={() => greet("John")}>Greet me</Button>
       <p>{result.data ?? "No message"}</p>
     </Card>
   );
