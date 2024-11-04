@@ -13,13 +13,14 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@repo/api": "workspace:*",
     "@repo/backend-core": "workspace:*",
     "@repo/ui": "workspace:*",
     "next": "^14.2.6",
     "next-safe-action": "^7.9.9",
     "react": "catalog:react18",
     "react-dom": "catalog:react18",
-    "zod": "^3.23.8"
+    "zod": "catalog:"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
