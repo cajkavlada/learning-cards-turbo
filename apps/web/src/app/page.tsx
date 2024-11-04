@@ -1,9 +1,14 @@
-import { Button, Card } from "@repo/ui";
+import { getTitle } from "@repo/backend-core";
 
-export default function Home() {
+import { Greeter } from "./_components/Greeter";
+
+export default async function Home() {
+  const title = await getTitle();
+
   return (
-    <Card className="bg-red-500">
-      hello<Button>click</Button>
-    </Card>
+    <div className="p-4">
+      <h1>{title}</h1>
+      <Greeter />
+    </div>
   );
 }
