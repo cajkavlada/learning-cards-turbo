@@ -2,7 +2,7 @@
 
 import { useAction } from "next-safe-action/hooks";
 
-import { Button, Card } from "@repo/ui";
+import { Button, Card } from "@repo/ui-web";
 
 import { greetAction } from "~/server/actions";
 
