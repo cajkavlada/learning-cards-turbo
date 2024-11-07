@@ -1,26 +1,25 @@
 {
-  "name": "@repo/web",
+  "name": "@repo/ui-mobile",
   "version": "0.0.0",
   "private": true,
   "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "scripts": {
-    "build": "next build",
-    "clean": "git clean -xdf .cache .next .turbo node_modules",
-    "dev": "next dev --turbo",
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
     "format": "prettier --check . --ignore-path ../../.gitignore",
-    "lint": "eslint",
-    "start": "next start",
-    "typecheck": "tsc --noEmit"
+    "lint": "eslint . --max-warnings 0",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
   },
   "dependencies": {
-    "@repo/api": "workspace:*",
-    "@repo/backend-core": "workspace:*",
-    "@repo/ui-web": "workspace:*",
-    "next": "^14.2.6",
-    "next-safe-action": "^7.9.9",
+    "@repo/ui-utils": "workspace:*",
+    "class-variance-authority": "catalog:",
+    "nativewind": "catalog:",
     "react": "catalog:react18",
-    "react-dom": "catalog:react18",
-    "zod": "catalog:"
+    "react-native": "catalog:react-native",
+    "react-native-reanimated": "catalog:react-native",
+    "react-native-uitextview": "^1.4.0"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
@@ -31,10 +30,8 @@
     "@types/react": "catalog:react18",
     "@types/react-dom": "catalog:react18",
     "eslint": "catalog:",
-    "eslint-config-next": "^15.0.2",
     "prettier": "catalog:",
     "tailwindcss": "catalog:",
     "typescript": "catalog:"
-  },
-  "prettier": "@repo/prettier-config"
+  }
 }
