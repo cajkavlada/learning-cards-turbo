@@ -73,9 +73,24 @@ importers:
       '@expo/vector-icons':
         specifier: ^14.0.2
         version: 14.0.4
+      '@react-native/metro-config':
+        specifier: ^0.76.1
+        version: 0.76.1(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))
       '@react-navigation/native':
         specifier: ^6.0.2
         version: 6.1.18(react-native@0.74.5(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(react@18.3.1))(react@18.3.1)
+      '@repo/ui-mobile':
+        specifier: workspace:*
+        version: link:../../packages/ui/mobile
+      '@rn-primitives/slot':
+        specifier: ^1.1.0
+        version: 1.1.0(react-native-web@0.19.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-native@0.74.5(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(react@18.3.1))(react@18.3.1)
+      '@rnx-kit/metro-config':
+        specifier: ^2.0.1
+        version: 2.0.1(@react-native/metro-config@0.76.1(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0)))(react-native@0.74.5(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(react@18.3.1))(react@18.3.1)
+      '@rnx-kit/metro-resolver-symlinks':
+        specifier: ^0.2.1
+        version: 0.2.1
       '@tanstack/react-query':
         specifier: ^5.59.19
         version: 5.59.19(react@18.3.1)
@@ -85,6 +100,9 @@ importers:
       '@trpc/react-query':
         specifier: 11.0.0-rc.608
         version: 11.0.0-rc.608(@tanstack/react-query@5.59.19(react@18.3.1))(@trpc/client@11.0.0-rc.608(@trpc/server@11.0.0-rc.608))(@trpc/server@11.0.0-rc.608)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      class-variance-authority:
+        specifier: ^0.7.0
+        version: 0.7.0
       expo:
         specifier: ~51.0.38
         version: 51.0.38(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))
@@ -136,6 +154,9 @@ importers:
       react-native-screens:
         specifier: 3.31.1
         version: 3.31.1(react-native@0.74.5(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(react@18.3.1))(react@18.3.1)
+      react-native-uitextview:
+        specifier: ^1.4.0
+        version: 1.4.0(react-native@0.74.5(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(react@18.3.1))(react@18.3.1)
       react-native-web:
         specifier: ~0.19.10
         version: 0.19.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -316,27 +337,21 @@ importers:
 
   packages/ui/mobile:
     dependencies:
-      '@repo/ui-utils':
-        specifier: workspace:*
-        version: link:../utils
-      class-variance-authority:
-        specifier: 'catalog:'
-        version: 0.7.0
       nativewind:
         specifier: 'catalog:'
         version: 4.1.23(react-native-reanimated@3.16.1(@babel/core@7.26.0)(react-native@0.76.1(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@13.6.9)(@types/react@18.3.12)(react@18.3.1))(react@18.3.1))(react-native@0.76.1(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@13.6.9)(@types/react@18.3.12)(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.14)
       react:
         specifier: catalog:react18
         version: 18.3.1
+      react-dom:
+        specifier: catalog:react18
+        version: 18.3.1(react@18.3.1)
       react-native:
         specifier: catalog:react-native
         version: 0.76.1(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@13.6.9)(@types/react@18.3.12)(react@18.3.1)
       react-native-reanimated:
         specifier: catalog:react-native
         version: 3.16.1(@babel/core@7.26.0)(react-native@0.76.1(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@13.6.9)(@types/react@18.3.12)(react@18.3.1))(react@18.3.1)
-      react-native-uitextview:
-        specifier: ^1.4.0
-        version: 1.4.0(react-native@0.76.1(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@13.6.9)(@types/react@18.3.12)(react@18.3.1))(react@18.3.1)
     devDependencies:
       '@repo/eslint-config':
         specifier: workspace:*
@@ -350,15 +365,9 @@ importers:
       '@repo/typescript-config':
         specifier: workspace:*
         version: link:../../../tooling/typescript-config
-      '@types/node':
-        specifier: 'catalog:'
-        version: 20.17.5
       '@types/react':
         specifier: catalog:react18
         version: 18.3.12
-      '@types/react-dom':
-        specifier: catalog:react18
-        version: 18.3.1
       eslint:
         specifier: 'catalog:'
         version: 9.14.0(jiti@1.21.6)
@@ -1388,7 +1397,7 @@ packages:
 
   '@expo/bunyan@4.0.1':
     resolution: {integrity: sha512-+Lla7nYSiHZirgK+U/uYzsLv/X+HaJienbD5AKX1UQZHYfWaP+9uuQluRB4GrEVWF0GZ7vEVp/jzaOT9k/SQlg==}
-    engines: {'0': node >=0.10.0}
+    engines: {node: '>=0.10.0'}
 
   '@expo/cli@0.18.30':
     resolution: {integrity: sha512-V90TUJh9Ly8stYo8nwqIqNWCsYjE28GlVFWEhAFCUOp99foiQr8HSTpiiX5GIrprcPoWmlGoY+J5fQA29R4lFg==}
@@ -1890,6 +1899,10 @@ packages:
     peerDependencies:
       '@babel/core': '*'
 
+  '@react-native/metro-config@0.76.1':
+    resolution: {integrity: sha512-RvsflPKsQ1tEaHDJksnMWwW5wtv8fskMRviL/jHlEW/ULEQ/MOE2yjuvJlRQkNvfqlJjkc1mczjy4+RO3mDQ6g==}
+    engines: {node: '>=18'}
+
   '@react-native/normalize-colors@0.74.84':
     resolution: {integrity: sha512-Y5W6x8cC5RuakUcTVUFNAIhUZ/tYpuqHZlRBoAuakrTwVuoNHXfQki8lj1KsYU7rW6e3VWgdEx33AfOQpdNp6A==}
 
@@ -2005,9 +2018,52 @@ packages:
   '@remix-run/web-stream@1.1.0':
     resolution: {integrity: sha512-KRJtwrjRV5Bb+pM7zxcTJkhIqWWSy+MYsIxHK+0m5atcznsf15YwUBWHWulZerV2+vvHH1Lp1DD7pw6qKW8SgA==}
 
+  '@rn-primitives/slot@1.1.0':
+    resolution: {integrity: sha512-/6LkEPMoGGyJiCAYo3MTCy9letbH6SIm5Dw6wal/ypq3Jvar9llYJstIP2KSZNhx3PmZMN1a581KVgNZ2Jyt5g==}
+    peerDependencies:
+      react: '*'
+      react-native: '*'
+      react-native-web: '*'
+    peerDependenciesMeta:
+      react-native:
+        optional: true
+      react-native-web:
+        optional: true
+
   '@rnx-kit/chromium-edge-launcher@1.0.0':
     resolution: {integrity: sha512-lzD84av1ZQhYUS+jsGqJiCMaJO2dn9u+RTT9n9q6D3SaKVwWqv+7AoRKqBu19bkwyE+iFRl1ymr40QS90jVFYg==}
     engines: {node: '>=14.15'}
+
+  '@rnx-kit/console@2.0.0':
+    resolution: {integrity: sha512-8kyM0TUWpawWlaypHKWLgJjPoF5HcsjIxx9LSnYM8VgwBW1gOl2cCDhPYaeS8IG9m0fi4rMtQD8OJqmwpJ2jEg==}
+    engines: {node: '>=16.17'}
+
+  '@rnx-kit/metro-config@2.0.1':
+    resolution: {integrity: sha512-BkhniefN5U5lQtlwu97rz+32reUyBCC22zBrCazV/3BvfOZ3b94z2oljUPtYIosoVKm4o6e2bGNlNklG1GWNbQ==}
+    engines: {node: '>=16.17'}
+    peerDependencies:
+      '@react-native/metro-config': '*'
+      react: '*'
+      react-native: '*'
+    peerDependenciesMeta:
+      '@react-native/metro-config':
+        optional: true
+
+  '@rnx-kit/metro-resolver-symlinks@0.2.1':
+    resolution: {integrity: sha512-EHO4odFMyQ3vh03J9lqDnF7RbG1WfH1s8A02S01ZhqtHEeFHEuk/sP90PN1uMuaoJQrcoRr2fJovdd/CoxXpsg==}
+    engines: {node: '>=16.17'}
+
+  '@rnx-kit/tools-node@3.0.0':
+    resolution: {integrity: sha512-9FmST15/KucIw8Yy5vHHr5JypTlYU+hNWDOhBMRLA3a88zc4MsRtdqfqbA/Nd9fM2Gyfkg8m2zgYJZQE6MDNaQ==}
+    engines: {node: '>=16.17'}
+
+  '@rnx-kit/tools-react-native@2.0.0':
+    resolution: {integrity: sha512-VTrjfDgcxfJily9FpSU+CnRLISzmz3WXMP37300YmYY1hHtxpJgElWx5/ChD2k+igXSXCdnuUKWYlsuu3065sQ==}
+    engines: {node: '>=16.17'}
+
+  '@rnx-kit/tools-workspaces@0.2.0':
+    resolution: {integrity: sha512-EjyFBASHOgXGATBjv0IHdqkiGf23s31dr/TjqUagmMHT4fGxxTUgI6rkC11cGYaL0u6QczsbhSi390B4k6cByg==}
+    engines: {node: '>=16.17'}
 
   '@rtsao/scc@1.1.0':
     resolution: {integrity: sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==}
@@ -5482,6 +5538,10 @@ packages:
   read-cache@1.0.0:
     resolution: {integrity: sha512-Owdv/Ft7IjOgm/i0xvNDZ1LrRANRfew4b2prF3OWMQLxLfu3bS8FVhCsrSCMK4lR56Y9ya+AThoTpDCTxCmpRA==}
 
+  read-yaml-file@2.1.0:
+    resolution: {integrity: sha512-UkRNRIwnhG+y7hpqnycCL/xbTk7+ia9VuVTC0S+zVbwd65DI9eUpRMfsWIGrCWxTU/mi+JW8cHQCrv+zfCbEPQ==}
+    engines: {node: '>=10.13'}
+
   readable-stream@2.3.8:
     resolution: {integrity: sha512-8p0AUk4XODgIewSi0l8Epjs+EVnWiK7NoDIEGU0HhE7+ZyY8D1IMY7odu5lRrFXGg71L15KG8QrPmum45RTtdA==}
 
@@ -8678,6 +8738,19 @@ snapshots:
       - '@babel/preset-env'
       - supports-color
 
+  '@react-native/metro-config@0.76.1(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))':
+    dependencies:
+      '@react-native/js-polyfills': 0.76.1
+      '@react-native/metro-babel-transformer': 0.76.1(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))
+      metro-config: 0.81.0
+      metro-runtime: 0.81.0
+    transitivePeerDependencies:
+      - '@babel/core'
+      - '@babel/preset-env'
+      - bufferutil
+      - supports-color
+      - utf-8-validate
+
   '@react-native/normalize-colors@0.74.84': {}
 
   '@react-native/normalize-colors@0.74.85': {}
@@ -8811,6 +8884,13 @@ snapshots:
     dependencies:
       web-streams-polyfill: 3.3.3
 
+  '@rn-primitives/slot@1.1.0(react-native-web@0.19.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-native@0.74.5(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      react: 18.3.1
+    optionalDependencies:
+      react-native: 0.74.5(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(react@18.3.1)
+      react-native-web: 0.19.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+
   '@rnx-kit/chromium-edge-launcher@1.0.0':
     dependencies:
       '@types/node': 18.19.63
@@ -8821,6 +8901,38 @@ snapshots:
       rimraf: 3.0.2
     transitivePeerDependencies:
       - supports-color
+
+  '@rnx-kit/console@2.0.0': {}
+
+  '@rnx-kit/metro-config@2.0.1(@react-native/metro-config@0.76.1(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0)))(react-native@0.74.5(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@rnx-kit/tools-node': 3.0.0
+      '@rnx-kit/tools-react-native': 2.0.0
+      '@rnx-kit/tools-workspaces': 0.2.0
+      react: 18.3.1
+      react-native: 0.74.5(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(react@18.3.1)
+    optionalDependencies:
+      '@react-native/metro-config': 0.76.1(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))
+
+  '@rnx-kit/metro-resolver-symlinks@0.2.1':
+    dependencies:
+      '@rnx-kit/console': 2.0.0
+      '@rnx-kit/tools-node': 3.0.0
+      '@rnx-kit/tools-react-native': 2.0.0
+      enhanced-resolve: 5.17.1
+
+  '@rnx-kit/tools-node@3.0.0': {}
+
+  '@rnx-kit/tools-react-native@2.0.0':
+    dependencies:
+      '@rnx-kit/tools-node': 3.0.0
+
+  '@rnx-kit/tools-workspaces@0.2.0':
+    dependencies:
+      fast-glob: 3.3.2
+      find-up: 5.0.0
+      read-yaml-file: 2.1.0
+      strip-json-comments: 3.1.1
 
   '@rtsao/scc@1.1.0': {}
 
@@ -12930,10 +13042,10 @@ snapshots:
       react-native: 0.74.5(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(react@18.3.1)
       warn-once: 0.1.1
 
-  react-native-uitextview@1.4.0(react-native@0.76.1(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@13.6.9)(@types/react@18.3.12)(react@18.3.1))(react@18.3.1):
+  react-native-uitextview@1.4.0(react-native@0.74.5(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(react@18.3.1))(react@18.3.1):
     dependencies:
       react: 18.3.1
-      react-native: 0.76.1(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@13.6.9)(@types/react@18.3.12)(react@18.3.1)
+      react-native: 0.74.5(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.3.12)(react@18.3.1)
 
   react-native-web@0.19.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
@@ -13074,6 +13186,11 @@ snapshots:
   read-cache@1.0.0:
     dependencies:
       pify: 2.3.0
+
+  read-yaml-file@2.1.0:
+    dependencies:
+      js-yaml: 4.1.0
+      strip-bom: 4.0.0
 
   readable-stream@2.3.8:
     dependencies:

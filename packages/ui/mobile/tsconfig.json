@@ -1,8 +1,13 @@
 {
   "extends": "@repo/typescript-config/internal-package.json",
   "compilerOptions": {
-    "jsx": "preserve",
+    "jsx": "react-native",
+    "moduleResolution": "Bundler",
+    "target": "ESNext",
+    "module": "ESNext",
     "lib": ["dom", "esnext"],
+    "checkJs": false,
+    "types": ["nativewind/types"],
     "baseUrl": ".",
     "paths": {
       "~/*": ["./src/*"]

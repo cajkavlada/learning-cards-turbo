@@ -1,24 +1,56 @@
 // Learn more: https://docs.expo.dev/guides/monorepos/
 const { getDefaultConfig } = require("expo/metro-config");
 const { FileStore } = require("metro-cache");
+const { makeMetroConfig } = require("@rnx-kit/metro-config");
 const { withNativeWind } = require("nativewind/metro");
+const MetroSymlinksResolver = require("@rnx-kit/metro-resolver-symlinks");
 
 const path = require("path");
 
+const projectRoot = __dirname;
+const workspaceRoot = path.resolve(projectRoot, "../..");
+
+const symlinksResolver = MetroSymlinksResolver();
+
 const config = withTurborepoManagedCache(
   withMonorepoPaths(
-    withNativeWind(getDefaultConfig(__dirname), {
+    withNativeWind(getDefaultConfig(projectRoot), {
       input: "./src/styles/globals.css",
       configPath: "./tailwind.config.ts",
-    })
-  )
+    }),
+  ),
 );
 
 // XXX: Resolve our exports in workspace packages
 // https://github.com/expo/expo/issues/26926
 config.resolver.unstable_enablePackageExports = true;
 
-module.exports = config;
+config.resolver.extraNodeModules = {
+  // Map any dependencies explicitly if needed
+  "@repo/ui-mobile": path.resolve(workspaceRoot, "packages/ui/mobile"),
+};
+
+module.exports = makeMetroConfig({
+  ...config,
+  resolver: {
+    ...config.resolver,
+    resolveRequest: (context, moduleName, platform) => {
+      try {
+        // Symlinks resolver throws when it can't find what we're looking for.
+        const res = symlinksResolver(context, moduleName, platform);
+
+        if (res) {
+          return res;
+        }
+      } catch {
+        // If we have an error, we pass it on to the next resolver in the chain,
+        // which should be one of expos.
+        // https://github.com/expo/expo/blob/9c025ce7c10b23546ca889f3905f4a46d65608a4/packages/%40expo/cli/src/start/server/metro/withMetroResolvers.ts#L47
+        return context.resolveRequest(context, moduleName, platform);
+      }
+    },
+  },
+});
 
 /**
  * Add the monorepo paths to the Metro config.
@@ -29,9 +61,6 @@ module.exports = config;
  * @returns {import('expo/metro-config').MetroConfig}
  */
 function withMonorepoPaths(config) {
-  const projectRoot = __dirname;
-  const workspaceRoot = path.resolve(projectRoot, "../..");
-
   // #1 - Watch all files in the monorepo
   config.watchFolders = [workspaceRoot];
 
@@ -40,7 +69,6 @@ function withMonorepoPaths(config) {
     path.resolve(projectRoot, "node_modules"),
     path.resolve(workspaceRoot, "node_modules"),
   ];
-
   return config;
 }
 

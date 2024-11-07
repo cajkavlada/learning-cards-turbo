@@ -1,7 +1,6 @@
 {
   "extends": ["@repo/typescript-config/base.json"],
   "compilerOptions": {
-    "strict": true,
     "baseUrl": ".",
     "paths": {
       "~/*": ["./src/*"]
@@ -9,9 +8,11 @@
     "jsx": "react-native",
     "types": ["nativewind/types"],
     "checkJs": false,
+    "module": "ESNext",
     "moduleSuffixes": [".ios", ".android", ".native", ""]
   },
   "include": [
+    "src",
     "**/*.ts",
     "**/*.tsx",
     ".expo/types/**/*.ts",

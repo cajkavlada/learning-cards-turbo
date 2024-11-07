@@ -24,5 +24,6 @@
     "eslint": "catalog:",
     "prettier": "catalog:",
     "typescript": "catalog:"
-  }
+  },
+  "prettier": "@repo/prettier-config"
 }
