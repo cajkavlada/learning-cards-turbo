@@ -1,0 +1,22 @@
+{
+  "expo": {
+    "scheme": "expo-starter",
+    "userInterfaceStyle": "automatic",
+    "entryPoint": "./index.js",
+    "web": {
+      "output": "static",
+      "bundler": "metro"
+    },
+    "plugins": [
+      [
+        "expo-router"
+      ]
+    ],
+    "name": "expo-starter",
+    "slug": "expo-starter"
+  },
+  "experiments": {
+    "tsconfigPaths": true,
+    "typedRoutes": true
+  }
+}

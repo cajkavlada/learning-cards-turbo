@@ -13,7 +13,6 @@
     "typecheck": "turbo run typecheck"
   },
   "devDependencies": {
-    "@repo/prettier-config": "workspace:*",
     "prettier": "catalog:",
     "turbo": "^2.2.3",
     "typescript": "catalog:"
