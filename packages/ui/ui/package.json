@@ -2,7 +2,10 @@
   "name": "@repo/ui",
   "version": "0.0.0",
   "private": true,
-  "main": "src/index.tsx",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "scripts": {
     "test": "echo 'nothing to do'",
     "build": "tsc .",
@@ -21,7 +24,6 @@
     "@repo/prettier-config": "workspace:*",
     "@repo/tailwind-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "@tsconfig/recommended": "^1.0.3",
     "@types/react": "catalog:react18",
     "eslint": "catalog:",
     "prettier": "catalog:",
