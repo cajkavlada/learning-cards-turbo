@@ -76,9 +76,6 @@ importers:
       '@react-native/metro-config':
         specifier: ^0.76.1
         version: 0.76.1(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))
-      '@repo/ui':
-        specifier: workspace:*
-        version: link:../../packages/ui/ui
       '@repo/ui-mobile':
         specifier: workspace:*
         version: link:../../packages/ui/mobile

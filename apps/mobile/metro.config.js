@@ -27,9 +27,6 @@ const config = makeMetroConfig({
   ...defaultConfig,
   resolver: {
     ...defaultConfig.resolver,
-    extraNodeModules: {
-      "@repo/ui-mobile": path.resolve(workspaceRoot, "packages/ui/mobile"),
-    },
     nodeModulesPaths: [
       path.resolve(projectRoot, "node_modules"),
       path.resolve(workspaceRoot, "node_modules"),
