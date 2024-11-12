@@ -1,24 +1,6 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "ui": "tui",
-  "pipeline": {
-    "lint": {
-      "outputs": []
-    },
-    "test": {
-      "dependsOn": ["build"],
-      "inputs": ["**/*.{ts,tsx,js,jsx}"]
-    },
-    "build": {
-      "outputs": [".next/**", "build/**", "node_modules/.cache/metro/**"]
-    },
-    "start": {
-      "cache": false,
-      "persistent": true
-    },
-    "clean:modules": {},
-    "clean:apps": {}
-  },
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
