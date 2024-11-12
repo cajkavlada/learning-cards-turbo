@@ -8,16 +8,8 @@
     "jsx": "react-native",
     "types": ["nativewind/types"],
     "checkJs": false,
-    "module": "ESNext",
     "moduleSuffixes": [".ios", ".android", ".native", ""]
   },
-  "include": [
-    "src",
-    "**/*.ts",
-    "**/*.tsx",
-    ".expo/types/**/*.ts",
-    "expo-env.d.ts",
-    "nativewind-env.d.ts"
-  ],
+  "include": ["src", "**/*.ts", "**/*.tsx", "nativewind-env.d.ts"],
   "exclude": ["node_modules"]
 }

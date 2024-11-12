@@ -1,7 +1,8 @@
 {
   "name": "@repo/example",
   "version": "1.0.0",
-  "main": "index.js",
+  "private": true,
+  "main": "expo-router/entry",
   "scripts": {
     "start": "expo start -i -g -c",
     "serve": "node server.js",
@@ -12,10 +13,10 @@
     "eas-build-post-install": "tailwindcss -i ./src/global.css -o ./node_modules/.cache/nativewind/global.css.native.css"
   },
   "dependencies": {
-    "@repo/ui-mobile": "workspace:*",
     "@expo/html-elements": "^0.5.1",
     "@expo/vector-icons": "^14.0.4",
     "@react-native/metro-config": "^0.76.1",
+    "@repo/ui-mobile": "workspace:*",
     "@rnx-kit/metro-config": "^2.0.1",
     "@rnx-kit/metro-resolver-symlinks": "^0.2.1",
     "compression": "^1.7.4",
@@ -50,6 +51,5 @@
     "eslint": "catalog:",
     "prettier": "catalog:",
     "typescript": "catalog:"
-  },
-  "private": true
+  }
 }
