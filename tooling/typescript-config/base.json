@@ -25,7 +25,8 @@
     /** Transpile using Bundler (not tsc) */
     "module": "esnext",
     "moduleResolution": "Bundler",
-    "noEmit": true
+    "noEmit": true,
+    "baseUrl": ".",
   },
   "exclude": ["node_modules", "build", "dist", ".next", ".expo"]
 }
