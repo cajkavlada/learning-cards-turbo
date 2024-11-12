@@ -1,16 +1,13 @@
 import { Text, View } from "react-native";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { Pmobile, TestComponent } from "@repo/ui-mobile";
 
+import { Greeter } from "~/components/Greeter";
+
 export default function Page() {
-  const { top } = useSafeAreaInsets();
   return (
     <View className="flex flex-1">
-      <View
-        className="py-12 md:py-24 lg:py-32 xl:py-48"
-        style={{ paddingTop: top + 24 }}
-      >
+      <View className="py-12 md:py-24 lg:py-32 xl:py-48">
         <View className="container px-4 md:px-6">
           <View className="flex flex-col gap-4">
             <Pmobile>
@@ -28,6 +25,10 @@ export default function Page() {
         <TestComponent>
           <Text>ahoj</Text>
         </TestComponent>
+        <View className="p-4 pt-16">
+          <Text>{"asdasda"}</Text>
+          <Greeter />
+        </View>
       </View>
     </View>
   );
