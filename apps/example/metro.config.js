@@ -40,5 +40,5 @@ const config = makeMetroConfig({
 
 module.exports = withNativeWind(config, {
   input: "./src/global.css",
-  configPath: "./tailwind.config.js",
+  configPath: "./tailwind.config.ts",
 });

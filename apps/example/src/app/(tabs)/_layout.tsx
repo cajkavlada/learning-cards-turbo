@@ -1,8 +1,8 @@
-import Colors from "@/constants/Colors";
-import Ionicons from "@expo/vector-icons/Ionicons";
-import { Tabs } from "expo-router";
-import React from "react";
 import { useColorScheme } from "react-native";
+import { Tabs } from "expo-router";
+import Ionicons from "@expo/vector-icons/Ionicons";
+
+import Colors from "~/constants/Colors";
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -18,7 +18,7 @@ export default function TabLayout() {
       }}
     >
       <Tabs.Screen
-        name='index'
+        name="index"
         options={{
           title: "Home",
           tabBarIcon: ({ focused, color }) => {
