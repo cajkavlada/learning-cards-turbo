@@ -17,7 +17,8 @@
     "react": "catalog:react18",
     "react-dom": "catalog:react18",
     "react-native": "catalog:react-native",
-    "react-native-reanimated": "catalog:react-native"
+    "react-native-reanimated": "catalog:react-native",
+    "tailwindcss": "catalog:"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
@@ -27,7 +28,6 @@
     "@types/react": "catalog:react18",
     "eslint": "catalog:",
     "prettier": "catalog:",
-    "tailwindcss": "catalog:",
     "typescript": "catalog:"
   },
   "prettier": "@repo/prettier-config"
