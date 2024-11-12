@@ -4,7 +4,7 @@ import { Text, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Button, H1, Code } from "@/components";
 import { P } from "@repo/ui";
-// import { TestComponent } from "@repo/ui-mobile";
+import { TestComponent } from "@repo/ui-mobile";
 
 export default function Page() {
   const { top } = useSafeAreaInsets();
@@ -30,9 +30,9 @@ export default function Page() {
             </P>
           </View>
         </View>
-        {/* <TestComponent>
+        <TestComponent>
           <Text>ahoj</Text>
-        </TestComponent> */}
+        </TestComponent>
       </View>
     </View>
   );

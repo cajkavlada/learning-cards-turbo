@@ -1,18 +1,12 @@
 {
-  "private": true,
   "name": "@repo/ui",
-  "version": "1.0.0",
-  "description": "React Native UI Elements",
-  "author": "Ty Rauber <tyrauber@mac.com>",
-  "license": "MIT",
+  "version": "0.0.0",
+  "private": true,
   "main": "src/index.tsx",
   "scripts": {
     "test": "echo 'nothing to do'",
     "build": "tsc .",
     "lint": "eslint --fix --ext js,ts,tsx ."
-  },
-  "devDependencies": {
-    "@tsconfig/recommended": "^1.0.3"
   },
   "peerDependencies": {
     "nativewind": "catalog:",
@@ -21,5 +15,17 @@
     "react-native": "catalog:react-native",
     "tailwind-variants": "^0.1.19",
     "tailwindcss": "catalog:"
-  }
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/prettier-config": "workspace:*",
+    "@repo/tailwind-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@tsconfig/recommended": "^1.0.3",
+    "@types/react": "catalog:react18",
+    "eslint": "catalog:",
+    "prettier": "catalog:",
+    "typescript": "catalog:"
+  },
+  "prettier": "@repo/prettier-config"
 }
