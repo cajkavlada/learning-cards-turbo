@@ -32,5 +32,6 @@
     "prettier": "catalog:",
     "tailwindcss": "catalog:",
     "typescript": "catalog:"
-  }
+  },
+  "prettier": "@repo/prettier-config"
 }

@@ -3,7 +3,8 @@
   "private": true,
   "scripts": {
     "build": "turbo build",
-    "clean": "git clean -xdf node_modules",
+    "clean-old": "git clean -xdf node_modules",
+    "clean": "pnpm -r run clean",
     "clean:workspaces": "turbo run clean",
     "dev": "turbo dev",
     "lint": "turbo run lint --continue -- --cache --cache-location .cache/.eslintcache",
@@ -12,7 +13,6 @@
     "typecheck": "turbo run typecheck"
   },
   "devDependencies": {
-    "@repo/prettier-config": "workspace:*",
     "prettier": "catalog:",
     "turbo": "^2.2.3",
     "typescript": "catalog:"

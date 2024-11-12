@@ -1,7 +1,6 @@
 {
   "extends": ["@repo/typescript-config/base.json"],
   "compilerOptions": {
-    "strict": true,
     "baseUrl": ".",
     "paths": {
       "~/*": ["./src/*"]
@@ -12,11 +11,12 @@
     "moduleSuffixes": [".ios", ".android", ".native", ""]
   },
   "include": [
+    "src",
     "**/*.ts",
     "**/*.tsx",
+    "nativewind-env.d.ts",
     ".expo/types/**/*.ts",
-    "expo-env.d.ts",
-    "nativewind-env.d.ts"
+    "expo-env.d.ts"
   ],
   "exclude": ["node_modules"]
 }

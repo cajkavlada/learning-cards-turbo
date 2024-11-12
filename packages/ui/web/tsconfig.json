@@ -2,8 +2,9 @@
   "extends": "@repo/typescript-config/internal-package.json",
   "compilerOptions": {
     "jsx": "preserve",
-    "lib": ["dom", "esnext"],
+    "lib": ["ES2022", "dom", "dom.iterable"],
     "baseUrl": ".",
+    "module": "ESNext",
     "paths": {
       "~/*": ["./src/*"]
     }

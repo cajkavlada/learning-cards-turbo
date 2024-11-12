@@ -1,12 +1,15 @@
 {
   "extends": "@repo/typescript-config/base.json",
   "compilerOptions": {
+    "lib": ["ES2022", "dom", "dom.iterable"],
     "plugins": [
       {
         "name": "next"
       }
     ],
+    "module": "esnext",
     "jsx": "preserve",
+    "baseUrl": ".",
     "paths": {
       "~/*": ["./src/*"]
     }
