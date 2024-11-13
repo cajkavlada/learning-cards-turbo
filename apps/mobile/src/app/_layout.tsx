@@ -1,6 +1,6 @@
 import { Stack } from "expo-router";
 
-import "../styles/globals.css";
+import "~/styles/globals.css";
 import "react-native-reanimated";
 
 import { View } from "react-native";

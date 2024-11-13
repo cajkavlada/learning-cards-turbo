@@ -8,7 +8,7 @@ export default function HomeScreen() {
 
   return (
     <>
-      <View className="flex-1 bg-background p-4 pt-16">
+      <View className="flex-1 bg-background p-4">
         <Text className="pb-2 text-foreground">{title}</Text>
         <Greeter />
       </View>
