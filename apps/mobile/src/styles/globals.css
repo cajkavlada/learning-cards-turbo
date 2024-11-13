@@ -26,7 +26,7 @@
   --destructive-ghost-foreground: 0 70% 40%;
 }
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   :root {
     --background: 179 32% 10%;
     --foreground: 179 5% 90%;
@@ -50,4 +50,4 @@
     --radius: 0.5rem;
     --destructive-ghost-foreground: 0 70% 75%;
   }
-} */
+}

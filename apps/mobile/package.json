@@ -5,7 +5,7 @@
   "main": "expo-router/entry",
   "scripts": {
     "clean": "git clean -xdf .cache .expo .turbo android ios node_modules",
-    "dev": "expo start",
+    "dev": "expo start -c",
     "format": "prettier --check . --ignore-path ../../.gitignore",
     "start": "expo start",
     "reset-project": "node ./scripts/reset-project.js",

@@ -12,7 +12,7 @@ export function Greeter() {
       <Button onPress={() => greet("World")}>
         <Text className="text-primary-foreground">Greet me</Text>
       </Button>
-      <Text>{data ?? "No message"}</Text>
+      <Text className="text-card-foreground">{data ?? "No message"}</Text>
     </Card>
   );
 }

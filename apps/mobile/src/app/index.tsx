@@ -8,8 +8,8 @@ export default function HomeScreen() {
 
   return (
     <>
-      <View className="p-4 pt-16">
-        <Text>{title}</Text>
+      <View className="flex-1 bg-background p-4 pt-16">
+        <Text className="pb-2 text-foreground">{title}</Text>
         <Greeter />
       </View>
     </>
