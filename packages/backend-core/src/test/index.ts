@@ -7,5 +7,5 @@ export async function getTitle() {
 
 export async function sayHi(name: string) {
   await new Promise<void>((resolve) => setTimeout(resolve, 1000));
-  return `Hi, ${name}!`;
+  return `Hello, ${name}!`;
 }

@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@repo/api": "workspace:*",
+    "@repo/env": "workspace:*",
     "@repo/backend-core": "workspace:*",
     "@repo/ui-web": "workspace:*",
     "next": "^14.2.6",

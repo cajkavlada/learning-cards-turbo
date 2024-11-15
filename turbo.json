@@ -27,5 +27,6 @@
       "dependsOn": ["^build"],
       "outputs": [".cache/tsbuildinfo.json"]
     }
-  }
+  },
+  "globalEnv": ["NEXT_PUBLIC_VAR", "SECRET_VAR", "EXPO_PUBLIC_API_URL"]
 }

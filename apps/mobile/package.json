@@ -21,6 +21,7 @@
     "@expo/html-elements": "^0.5.1",
     "@expo/vector-icons": "^14.0.4",
     "@react-native/metro-config": "^0.76.1",
+    "@repo/env": "workspace:*",
     "@repo/ui-mobile": "workspace:*",
     "@rnx-kit/metro-config": "^2.0.1",
     "@rnx-kit/metro-resolver-symlinks": "^0.2.1",
